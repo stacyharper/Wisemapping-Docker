@@ -1,0 +1,18 @@
+mysql:
+  image: mysql:5.7.12
+  environment:
+   - MYSQL_ROOT_PASSWORD=root
+  volumes:
+   - ./wisemapping/mysql:/var/lib/mysql
+  restart: always
+
+app:
+  build: docker
+  restart: always
+  links:
+   - mysql:mysql
+  ports:
+   - 7548:8080
+  environment:
+   - VIRTUAL_HOST=dev.wisemapping.fr
+
