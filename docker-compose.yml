@@ -14,5 +14,5 @@ app:
   ports:
    - 7548:8080
   environment:
-   - VIRTUAL_HOST=wisemapping.misterbanal.net
+   - VIRTUAL_HOST=wisemapping.idci-consulting.fr
 
