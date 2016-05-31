@@ -1,0 +1,7 @@
+#  Ngninx reverse proxy docker-compose.yml
+#  add this line to your volumes
+#  - ./nginx-conf/wisemapping:/etc/nginx/vhost.d/wisemapping.YOURHOSTNAME
+
+location = / {
+  return 301 /wisemapping;
+}
