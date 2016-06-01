@@ -1,6 +1,4 @@
 
-
-
 default: start
 
 start:
@@ -25,3 +23,5 @@ rebuild: remove
 	docker-compose build
 	docker-compose up -d
 
+install-sql:
+	docker exec -it wisemapping_app /wisemapping/init-sql.sh

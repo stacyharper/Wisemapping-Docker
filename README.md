@@ -1,6 +1,13 @@
 # Wisemapping-Docker
 
-To install the database you have to execute this command :
+To install the database :
+
+With make :
 ```sh
-$ docker exec -it CONTAINERID /wisemapping/init-sql.sh
+$ make install-sql
+```
+
+Or using this command :
+```sh
+$ docker exec -it wisemapping_app /wisemapping/init-sql.sh
 ```
